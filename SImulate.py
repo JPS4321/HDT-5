@@ -1,17 +1,20 @@
 import simpy
 import random as rand
 
-Cantidad_Procesos = 25
-Intervalos = 10
-Solicitud_Memoria = rand.expovariate(1.0/Intervalos)
-Cantidad_Memoria_RAM = 100
-Capacidad = 1
+RAMS = 100
+
+class RAM:
+    def __init__(self,Cantidad_Ram):
+        self.Cantidad_Ram = RAMS
+        
+class Proceso:
+    def __init__(self):
+        self.Numero_Instrucciones = rand.randint(1,10)
+        self.Espacio_Memoria = rand.randint(1,10)
 
 
-class Computadora:
-    def __init__(self, env, Cantidad_Procesos, Intervalos, Cantidad_Memoria_RAM, Capacidad):
-        self.env = env
-        self.Cantidad_Procesos = Cantidad_Procesos
-        self.Intervalos = Intervalos
-        self.Cantidad_Memoria_RAM = Cantidad_Memoria_RAM
-        self.Capacidad = simpy.Resource(env,Capacidad)
+
+
+        
+##KOU UWU
+#Esteban UwU*
